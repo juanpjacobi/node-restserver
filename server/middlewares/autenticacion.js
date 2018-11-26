@@ -31,10 +31,9 @@ let verificaToken = (req, res, next) => {
 // =====================
 // Verifica AdminRole
 // =====================
-let verificaAdminRole = (req, res, next) => {
+let verificaAdmin_Role = (req, res, next) => {
 
     let usuario = req.usuario;
-
 
     if (usuario.role === 'ADMIN_ROLE') {
         next();
@@ -53,5 +52,5 @@ let verificaAdminRole = (req, res, next) => {
 
 module.exports = {
     verificaToken,
-    verificaAdminRole
+    verificaAdmin_Role
 }
